@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GORDIYA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Aref+Ruqaa:wght@400;700&family=Vazirmatn:wght@300..800&display=swap" rel="stylesheet">
+  <link id="bs-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" disabled>
+  <link id="bs-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Logo symbol (static uses: nav, footer, about) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 120 120">
+    <path class="lg lg-a" d="M93.7 31.7 A44 44 0 1 0 104 60 L66 60" stroke-width="7"/>
+    <path class="lg lg-b" d="M20 100 L100 20" stroke-width="3"/>
+  </symbol>
+</svg>
+
+<div id="bar"></div>
+<div class="cur-dot"></div>
+<div class="cur-ring"><i></i></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="curtain top"></div><div class="curtain bottom"></div>
+  <div class="loader-inner">
+    <svg viewBox="0 0 120 120" class="loader-logo">
+      <path class="lg lg-a lp lp-l" pathLength="1" d="M93.7 31.7 A44 44 0 1 0 104 60 L66 60" stroke-width="7"/>
+      <path class="lg lg-b lp lp-l d2" pathLength="1" d="M20 100 L100 20" stroke-width="3"/>
+    </svg>
+    <div class="loader-word">GORDIYA</div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top gnav">
+  <div class="container">
+    <a class="navbar-brand brand" href="#home">
+      <svg viewBox="0 0 120 120"><use href="#logo"/></svg>
+      <span>GORDIYA</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_services"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#work" data-i18n="nav_work"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#ideas" data-i18n="nav_ideas"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#book" data-i18n="nav_book"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews" data-i18n="nav_reviews"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+      <div class="d-flex gap-2 tools">
+        <button id="langBtn" class="tool-btn" type="button">EN</button>
+        <button id="themeBtn" class="tool-btn" type="button" aria-label="theme"><i></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="hero">
+  <div class="blob-wrap"><div class="blob"></div></div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="tag reveal" data-i18n="hero_tag"></div>
+        <h1 class="hero-title">
+          <span class="split" data-i18n="hero_t1" data-split></span>
+          <span class="split accent" data-i18n="hero_t2" data-split></span>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="hero_sub"></p>
+        <div class="d-flex flex-wrap gap-3 reveal">
+          <a href="#book" class="btn-g mag"><span data-i18n="hero_cta1"></span> <b>↗</b></a>
+          <a href="#work" class="btn-g btn-line mag"><span data-i18n="hero_cta2"></span></a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="stage reveal">
+          <div class="orbit o1"></div><div class="orbit o2"></div>
+          <div class="big-logo">
+            <svg viewBox="0 0 120 120">
+              <path class="lg lg-a lp lp-h" pathLength="1" d="M93.7 31.7 A44 44 0 1 0 104 60 L66 60" stroke-width="5"/>
+              <path class="lg lg-b lp lp-h d2" pathLength="1" d="M20 100 L100 20" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span></span></div>
+</header>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>WEB ✦ APP ✦ CONTENT ✦ EDIT ✦ SCRIPT ✦ IDEAS ✦ ADMIN ✦ </span>
+    <span>WEB ✦ APP ✦ CONTENT ✦ EDIT ✦ SCRIPT ✦ IDEAS ✦ ADMIN ✦ </span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about" class="sec">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-7">
+        <span class="eyebrow reveal">01</span>
+        <h2 class="sec-title split" data-i18n="about_title" data-split></h2>
+        <p class="lead-text reveal" data-i18n="about_text"></p>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center reveal">
+        <div class="badge-spin">
+          <svg viewBox="0 0 200 200" class="spin">
+            <defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+            <text><textPath href="#circ" textLength="496" lengthAdjust="spacing">GORDIYA ✦ BOLD BY BIRTH ✦ GORDIYA ✦ BOLD BY BIRTH ✦ </textPath></text>
+          </svg>
+          <svg viewBox="0 0 120 120" class="mid"><use href="#logo"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="row g-0 stats reveal">
+      <div class="col-6 col-md-3"><div class="stat"><b data-count="120">0</b><small data-i18n="st1"></small></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><b data-count="48">0</b><small data-i18n="st2"></small></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><b data-count="900">0</b><small data-i18n="st3"></small></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><b data-count="365">0</b><small data-i18n="st4"></small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">02</span>
+    <h2 class="sec-title split" data-i18n="services_title" data-split></h2>
+    <div class="svc-list reveal">
+      <div class="svc"><i>01</i><div><h3 data-i18n="s1_t"></h3><p data-i18n="s1_d"></p></div><b>↗</b></div>
+      <div class="svc"><i>02</i><div><h3 data-i18n="s2_t"></h3><p data-i18n="s2_d"></p></div><b>↗</b></div>
+      <div class="svc"><i>03</i><div><h3 data-i18n="s3_t"></h3><p data-i18n="s3_d"></p></div><b>↗</b></div>
+      <div class="svc"><i>04</i><div><h3 data-i18n="s4_t"></h3><p data-i18n="s4_d"></p></div><b>↗</b></div>
+      <div class="svc"><i>05</i><div><h3 data-i18n="s5_t"></h3><p data-i18n="s5_d"></p></div><b>↗</b></div>
+      <div class="svc"><i>06</i><div><h3 data-i18n="s6_t"></h3><p data-i18n="s6_d"></p></div><b>↗</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">03</span>
+    <h2 class="sec-title split" data-i18n="work_title" data-split></h2>
+    <div class="filters reveal">
+      <button class="chip active" data-f="all" data-i18n="f_all"></button>
+      <button class="chip" data-f="web" data-i18n="f_web"></button>
+      <button class="chip" data-f="app" data-i18n="f_app"></button>
+      <button class="chip" data-f="content" data-i18n="f_content"></button>
+      <button class="chip" data-f="edit" data-i18n="f_edit"></button>
+    </div>
+    <div class="row g-4" id="grid">
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="web"><div class="work w1"><span class="shape"></span><span class="pill" data-i18n="f_web"></span><h4 data-i18n="p1"></h4><b class="go">↗</b></div></div>
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="app"><div class="work w2"><span class="shape"></span><span class="pill" data-i18n="f_app"></span><h4 data-i18n="p2"></h4><b class="go">↗</b></div></div>
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="content"><div class="work w3"><span class="shape"></span><span class="pill" data-i18n="f_content"></span><h4 data-i18n="p3"></h4><b class="go">↗</b></div></div>
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="edit"><div class="work w4"><span class="shape"></span><span class="pill" data-i18n="f_edit"></span><h4 data-i18n="p4"></h4><b class="go">↗</b></div></div>
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="web"><div class="work w5"><span class="shape"></span><span class="pill" data-i18n="f_web"></span><h4 data-i18n="p5"></h4><b class="go">↗</b></div></div>
+      <div class="col-md-6 col-lg-4 item reveal" data-cat="app"><div class="work w6"><span class="shape"></span><span class="pill" data-i18n="f_app"></span><h4 data-i18n="p6"></h4><b class="go">↗</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Ideas -->
+<section id="ideas" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">04</span>
+    <h2 class="sec-title split" data-i18n="ideas_title" data-split></h2>
+    <p class="lead-text reveal mb-5" data-i18n="ideas_sub"></p>
+    <div class="row g-5">
+      <div class="col-lg-7 reveal">
+        <div class="idea-row"><i>#1</i><div><h5 data-i18n="i1_t"></h5><p data-i18n="i1_d"></p></div></div>
+        <div class="idea-row"><i>#2</i><div><h5 data-i18n="i2_t"></h5><p data-i18n="i2_d"></p></div></div>
+        <div class="idea-row"><i>#3</i><div><h5 data-i18n="i3_t"></h5><p data-i18n="i3_d"></p></div></div>
+      </div>
+      <div class="col-lg-5 reveal">
+        <form id="ideaForm" class="panel">
+          <h5 data-i18n="idea_form"></h5>
+          <input class="form-control" name="name" required data-i18n-ph="f_name">
+          <textarea class="form-control" name="idea" rows="4" required data-i18n-ph="f_idea"></textarea>
+          <button class="btn-g mag" type="submit"><span data-i18n="f_send"></span> <b>↗</b></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section id="book" class="sec">
+  <div class="container">
+    <div class="panel big reveal">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <span class="eyebrow">05</span>
+          <h2 class="sec-title" data-i18n="book_title"></h2>
+          <p class="lead-text" data-i18n="book_sub"></p>
+        </div>
+        <div class="col-lg-7">
+          <form id="bookForm" class="row g-3">
+            <div class="col-md-6"><input class="form-control" name="name" required data-i18n-ph="f_name"></div>
+            <div class="col-md-6"><input class="form-control" name="phone" type="tel" required data-i18n-ph="f_phone"></div>
+            <div class="col-12">
+              <select class="form-select" name="service" required>
+                <option value="" data-i18n="f_service"></option>
+                <option data-i18n="s1_t"></option><option data-i18n="s2_t"></option><option data-i18n="s3_t"></option>
+                <option data-i18n="s4_t"></option><option data-i18n="s5_t"></option><option data-i18n="s6_t"></option>
+              </select>
+            </div>
+            <div class="col-md-6"><input class="form-control" name="date" type="date" required></div>
+            <div class="col-md-6">
+              <select class="form-select" name="time" required>
+                <option>10:00</option><option>11:00</option><option>13:00</option><option>15:00</option><option>17:00</option><option>20:00</option>
+              </select>
+            </div>
+            <div class="col-12"><textarea class="form-control" name="note" rows="2" data-i18n-ph="f_note"></textarea></div>
+            <div class="col-12"><button class="btn-g mag" type="submit"><span data-i18n="f_book"></span> <b>↗</b></button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">06</span>
+    <h2 class="sec-title split" data-i18n="reviews_title" data-split></h2>
+    <div id="revCar" class="carousel slide carousel-fade reveal" data-bs-ride="carousel" data-bs-interval="5500">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><div class="review"><p data-i18n="r1"></p><b data-i18n="r1n"></b></div></div>
+        <div class="carousel-item"><div class="review"><p data-i18n="r2"></p><b data-i18n="r2n"></b></div></div>
+        <div class="carousel-item"><div class="review"><p data-i18n="r3"></p><b data-i18n="r3n"></b></div></div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#revCar" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#revCar" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#revCar" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="sec">
+  <div class="container">
+    <span class="eyebrow reveal">07</span>
+    <h2 class="sec-title split" data-i18n="contact_title" data-split></h2>
+    <p class="lead-text reveal mb-5" data-i18n="contact_sub"></p>
+    <div class="contact-list reveal">
+      <a class="contact" href="mailto:hello@gordiya.com"><small data-i18n="c_mail"></small><b dir="ltr">goordiya@gmail.com</b><u>↗</u></a>
+      <a class="contact" href="tel:+989120000000"><small data-i18n="c_phone"></small><b dir="ltr">+98 939 509 8811</b><u>↗</u></a>
+      <a class="contact" href="https://instagram.com/gordiya" target="_blank" rel="noopener"><small>Instagram</small><b dir="ltr">@gordiya</b><u>↗</u></a>
+      <a class="contact" href="https://t.me/gordiya" target="_blank" rel="noopener"><small>Telegram</small><b dir="ltr">@gordiya</b><u>↗</u></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="giant" aria-hidden="true">GORDIYA</div>
+  <div class="foot-row">
+    <svg viewBox="0 0 120 120"><use href="#logo"/></svg>
+    <span>© 2026 GORDIYA</span>
+    <small data-i18n="foot"></small>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
